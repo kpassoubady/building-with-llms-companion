@@ -17,7 +17,7 @@ Instructions:
 4. Experiment: swap tier="mini" for tier="default" on the quality-sensitive tasks
    and compare the output.
 
-Run: python exercises/ch03/hello_llm.py  (from the repo root)
+Run: python solutions/ch03/hello_llm.py  (from the repo root)
 """
 
 import os
@@ -54,90 +54,66 @@ TOPIC = "renewable energy storage"
 
 
 def task_summarize(text: str) -> str:
-    """Summarize `text` in 2 sentences.
-
-    TODO: Implement this function.
-      Build a messages list with a system message setting the summarization role
-      and a user message containing the text. Call get_completion() with tier="mini".
-
-    # Hint:
-    # messages = [
-    #     {"role": "system", "content": "You are a concise summarizer. Reply in 2 sentences."},
-    #     {"role": "user", "content": f"Summarize:\n\n{text}"},
-    # ]
-    # return get_completion(messages, tier="mini")
-    """
-    raise NotImplementedError("Implement task_summarize()")
+    """Summarize `text` in 2 sentences."""
+    messages = [
+        {"role": "system", "content": "You are a concise summarizer. Reply in 2 sentences."},
+        {"role": "user", "content": f"Summarize:\n\n{text}"},
+    ]
+    return get_completion(messages, tier="mini")
 
 
 def task_classify(text: str) -> str:
-    """Classify the sentiment of `text` as POSITIVE, NEGATIVE, or NEUTRAL.
-
-    TODO: Implement this function.
-      Instruct the model to respond with only one word: POSITIVE, NEGATIVE, or NEUTRAL.
-
-    # Hint:
-    # messages = [
-    #     {"role": "system", "content": "Classify sentiment. Reply with exactly one word: "
-    #         "POSITIVE, NEGATIVE, or NEUTRAL."},
-    #     {"role": "user", "content": text},
-    # ]
-    # return get_completion(messages, tier="mini")
-    """
-    raise NotImplementedError("Implement task_classify()")
+    """Classify the sentiment of `text` as POSITIVE, NEGATIVE, or NEUTRAL."""
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "Classify sentiment. Reply with exactly one word: "
+                "POSITIVE, NEGATIVE, or NEUTRAL."
+            ),
+        },
+        {"role": "user", "content": text},
+    ]
+    return get_completion(messages, tier="mini")
 
 
 def task_translate(text: str, target_language: str = "French") -> str:
-    """Translate `text` into `target_language`.
-
-    TODO: Implement this function.
-      Build messages instructing the model to translate and return only
-      the translated text, no explanation.
-
-    # Hint:
-    # messages = [
-    #     {"role": "system", "content": f"Translate to {target_language}. Return the translation only."},
-    #     {"role": "user", "content": text},
-    # ]
-    # return get_completion(messages, tier="mini")
-    """
-    raise NotImplementedError("Implement task_translate()")
+    """Translate `text` into `target_language`."""
+    messages = [
+        {
+            "role": "system",
+            "content": f"Translate to {target_language}. Return the translation only.",
+        },
+        {"role": "user", "content": text},
+    ]
+    return get_completion(messages, tier="mini")
 
 
 def task_extract_entities(text: str) -> str:
-    """Extract named entities (people, organizations, locations, dates) from `text`.
-
-    TODO: Implement this function.
-      Ask the model to return a simple list of entities grouped by type.
-      Use tier="default" for better accuracy on structured extraction.
-
-    # Hint:
-    # messages = [
-    #     {"role": "system", "content": (
-    #         "Extract named entities. Group by type: PERSON, ORG, LOCATION, DATE. "
-    #         "One entity per line, format: TYPE: entity"
-    #     )},
-    #     {"role": "user", "content": text},
-    # ]
-    # return get_completion(messages, tier="default")
-    """
-    raise NotImplementedError("Implement task_extract_entities()")
+    """Extract named entities (people, organizations, locations, dates) from `text`."""
+    messages = [
+        {
+            "role": "system",
+            "content": (
+                "Extract named entities. Group by type: PERSON, ORG, LOCATION, DATE. "
+                "One entity per line, format: TYPE: entity"
+            ),
+        },
+        {"role": "user", "content": text},
+    ]
+    return get_completion(messages, tier="default")
 
 
 def task_generate(topic: str) -> str:
-    """Generate 3 creative blog post title ideas for `topic`.
-
-    TODO: Implement this function.
-      Ask for exactly 3 numbered titles, no additional commentary.
-
-    # Hint:
-    # messages = [
-    #     {"role": "system", "content": "Generate blog post titles. Return exactly 3 numbered titles."},
-    #     {"role": "user", "content": f"Topic: {topic}"},
-    # ]
-    # return get_completion(messages, tier="mini")
-    """
-    raise NotImplementedError("Implement task_generate()")
+    """Generate 3 creative blog post title ideas for `topic`."""
+    messages = [
+        {
+            "role": "system",
+            "content": "Generate blog post titles. Return exactly 3 numbered titles.",
+        },
+        {"role": "user", "content": f"Topic: {topic}"},
+    ]
+    return get_completion(messages, tier="mini")
 
 
 def main():
@@ -157,9 +133,8 @@ def main():
 
     for label, fn in tasks:
         print(f"\n[{label}]")
-        # TODO: uncomment the next two lines once the functions are implemented
-        # result = fn()
-        # print(result)
+        result = fn()
+        print(result)
 
 
 if __name__ == "__main__":
