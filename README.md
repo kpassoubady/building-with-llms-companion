@@ -21,10 +21,10 @@ exercises/
   ch12/                      # Chapter 12: Security & Guardrails
   ch13/                      # Chapter 13: Cost, Latency & Error Handling
   ch14/                      # Chapter 14: Ethics, Bias & Evaluation
-  capstone/                  # Capstone project (3 exercises)
+  capstone-1/                # Capstone 1 project (Global Fleet Intelligence)
+  capstone-2/                # Capstone 2 project (Global Intelligent Fleet Assistant)
 solutions/
   ch01/ ... ch14/            # Reference solutions for each chapter
-  capstone/                  # Capstone solutions
 diagrams/
   ch01-transformer-full.excalidraw.png
   ch04-capability-matrix.excalidraw.png
