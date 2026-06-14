@@ -14,7 +14,7 @@ footer: 'Capstone (Capstone 1): Global Fleet Intelligence'
 
 **A take-away project covering the foundations**
 
-<img class="logo" src="../../assets/logo-white.svg" />
+<img class="logo" src="../../../assets/logo-white.svg" />
 
 ---
 
@@ -68,7 +68,7 @@ Each exercise turns one text stream into structured, actionable data using promp
 
 ## Driver Issue Classifier
 
-<img class="logo" src="../../assets/logo-white.svg" />
+<img class="logo" src="../../../assets/logo-white.svg" />
 
 ---
 
@@ -108,7 +108,7 @@ Do not invent details not in the report."""
 
 ## Work Order Parser and Cost Checker
 
-<img class="logo" src="../../assets/logo-white.svg" />
+<img class="logo" src="../../../assets/logo-white.svg" />
 
 ---
 
@@ -149,7 +149,7 @@ The sum of line items should equal total. If not -> SUSPICIOUS."""
 
 ## Fleet Service Advisor (mini project)
 
-<img class="logo" src="../../assets/logo-white.svg" />
+<img class="logo" src="../../../assets/logo-white.svg" />
 
 ---
 
@@ -244,4 +244,4 @@ python3 capstone-1/exercise3_fleet_service_advisor.py
 
 Everything you need comes from Chapters 1-8.
 
-<img class="logo" src="../../assets/logo-white.svg" />
+<img class="logo" src="../../../assets/logo-white.svg" />

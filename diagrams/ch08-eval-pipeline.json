@@ -1,0 +1,51 @@
+[
+  {
+    "type": "rectangle", "id": "bg", "x": 50, "y": 50, "width": 1000, "height": 400,
+    "backgroundColor": "#e5dbff", "fillStyle": "solid", "opacity": 30, "strokeStyle": "solid", "roundness": { "type": 3 }
+  },
+  {
+    "type": "text", "id": "title", "x": 100, "y": 80, "width": 800, "height": 40,
+    "text": "Evaluation Pipeline", "fontSize": 24, "textAlign": "center"
+  },
+  {
+    "type": "rectangle", "id": "golden", "x": 100, "y": 200, "width": 180, "height": 80,
+    "backgroundColor": "#c3fae8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Golden Dataset\n(JSONL)", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "runner", "x": 350, "y": 200, "width": 180, "height": 80,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Prompt Runner\n(LLM API Calls)", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "scorer", "x": 600, "y": 200, "width": 180, "height": 80,
+    "backgroundColor": "#ffd8a8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Multi-Scorer\n(LLM-as-Judge)", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "report", "x": 850, "y": 200, "width": 180, "height": 80,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Report Generator\n(Metrics/Dashboard)", "fontSize": 18 }
+  },
+  {
+    "type": "arrow", "id": "a1", "x": 280, "y": 240, "width": 70, "height": 0,
+    "points": [[0,0], [70,0]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "golden", "fixedPoint": [1, 0.5] },
+    "endBinding": { "elementId": "runner", "fixedPoint": [0, 0.5] }
+  },
+  {
+    "type": "arrow", "id": "a2", "x": 530, "y": 240, "width": 70, "height": 0,
+    "points": [[0,0], [70,0]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "runner", "fixedPoint": [1, 0.5] },
+    "endBinding": { "elementId": "scorer", "fixedPoint": [0, 0.5] }
+  },
+  {
+    "type": "arrow", "id": "a3", "x": 780, "y": 240, "width": 70, "height": 0,
+    "points": [[0,0], [70,0]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "scorer", "fixedPoint": [1, 0.5] },
+    "endBinding": { "elementId": "report", "fixedPoint": [0, 0.5] }
+  },
+  {
+    "type": "cameraUpdate", "width": 1200, "height": 600, "x": 0, "y": 0
+  }
+]

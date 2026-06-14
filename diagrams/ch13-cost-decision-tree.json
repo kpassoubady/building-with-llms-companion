@@ -1,0 +1,84 @@
+[
+  {
+    "type": "rectangle", "id": "bg", "x": 50, "y": 50, "width": 1000, "height": 600,
+    "backgroundColor": "#fff3bf", "fillStyle": "solid", "opacity": 30, "strokeStyle": "solid", "roundness": { "type": 3 }
+  },
+  {
+    "type": "text", "id": "title", "x": 100, "y": 80, "width": 800, "height": 40,
+    "text": "Cost Optimization Decision Tree", "fontSize": 24, "textAlign": "center"
+  },
+  {
+    "type": "rectangle", "id": "root", "x": 450, "y": 150, "width": 200, "height": 60,
+    "backgroundColor": "#ffd8a8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Cost Too High?", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "prompt", "x": 150, "y": 250, "width": 200, "height": 60,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Optimize Prompt\n(Shorter Context)", "fontSize": 16 }
+  },
+  {
+    "type": "rectangle", "id": "model", "x": 750, "y": 250, "width": 200, "height": 60,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Switch Model Tier", "fontSize": 16 }
+  },
+  {
+    "type": "rectangle", "id": "cache", "x": 450, "y": 250, "width": 200, "height": 60,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Implement Caching", "fontSize": 16 }
+  },
+  {
+    "type": "arrow", "id": "a1", "x": 450, "y": 180, "width": -200, "height": 70,
+    "points": [[0,0], [-200,70]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "root", "fixedPoint": [0, 0.5] },
+    "endBinding": { "elementId": "prompt", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "arrow", "id": "a2", "x": 550, "y": 210, "width": 0, "height": 40,
+    "points": [[0,0], [0,40]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "root", "fixedPoint": [0.5, 1] },
+    "endBinding": { "elementId": "cache", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "arrow", "id": "a3", "x": 650, "y": 180, "width": 200, "height": 70,
+    "points": [[0,0], [200,70]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "root", "fixedPoint": [1, 0.5] },
+    "endBinding": { "elementId": "model", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "rectangle", "id": "s1", "x": 150, "y": 350, "width": 200, "height": 60,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "10-20% Savings", "fontSize": 16 }
+  },
+  {
+    "type": "rectangle", "id": "s2", "x": 450, "y": 350, "width": 200, "height": 60,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "30-50% Savings\n(High Duplication)", "fontSize": 16 }
+  },
+  {
+    "type": "rectangle", "id": "s3", "x": 750, "y": 350, "width": 200, "height": 60,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "90%+ Savings\n(GPT-4 to 3.5)", "fontSize": 16 }
+  },
+  {
+    "type": "arrow", "id": "a4", "x": 250, "y": 310, "width": 0, "height": 40,
+    "points": [[0,0], [0,40]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "prompt", "fixedPoint": [0.5, 1] },
+    "endBinding": { "elementId": "s1", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "arrow", "id": "a5", "x": 550, "y": 310, "width": 0, "height": 40,
+    "points": [[0,0], [0,40]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "cache", "fixedPoint": [0.5, 1] },
+    "endBinding": { "elementId": "s2", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "arrow", "id": "a6", "x": 850, "y": 310, "width": 0, "height": 40,
+    "points": [[0,0], [0,40]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "model", "fixedPoint": [0.5, 1] },
+    "endBinding": { "elementId": "s3", "fixedPoint": [0.5, 0] }
+  },
+  {
+    "type": "cameraUpdate", "width": 1200, "height": 800, "x": 0, "y": 0
+  }
+]
