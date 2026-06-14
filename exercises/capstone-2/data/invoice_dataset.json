@@ -1,0 +1,32 @@
+[
+  {
+    "id": "INV-001",
+    "text": "Joe's Garage. Date: 2023-10-01. Vehicle: 2021 Ford F-150. Services: Oil change ($65.00), Tire rotation ($20.00). Total: $85.00. Tax: $5.00. Grand Total: $90.00. Note: Customer requested we also check the brakes, they look fine.",
+    "expected_total": 90.00,
+    "expected_services": ["Oil change", "Tire rotation"]
+  },
+  {
+    "id": "INV-002",
+    "text": "Main St Auto Repair. 11/15/2023. Chevy Malibu (Fleet #402). Replaced front brake pads for 150 bucks. Labor was 100. Total due is $250.00",
+    "expected_total": 250.00,
+    "expected_services": ["Replaced front brake pads"]
+  },
+  {
+    "id": "INV-003",
+    "text": "QuickLube #42. 12/05/2023. Synthetic oil change special: $49.99. Air filter replacement: $19.99. Tax: $5.00. Final amount: $74.98. Vehicle: Toyota Camry.",
+    "expected_total": 74.98,
+    "expected_services": ["Synthetic oil change", "Air filter replacement"]
+  },
+  {
+    "id": "INV-004",
+    "text": "City Towing & Repair. Jan 10, 2024. Towed vehicle from I-95 ($100). Replaced dead battery ($120). Total cost: 220.00.",
+    "expected_total": 220.00,
+    "expected_services": ["Towed vehicle", "Replaced dead battery"]
+  },
+  {
+    "id": "INV-005",
+    "text": "Dealership Service Center. 02/20/2024. EV Battery Diagnostic: $0.00 (Covered under warranty). Wiper blades: $30.00. Total paid: $30.00.",
+    "expected_total": 30.00,
+    "expected_services": ["EV Battery Diagnostic", "Wiper blades"]
+  }
+]
