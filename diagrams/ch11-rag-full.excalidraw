@@ -1,0 +1,617 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-cli",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "ingest_bg",
+      "x": 50,
+      "y": 50,
+      "width": 1000,
+      "height": 300,
+      "backgroundColor": "#d3f9d8",
+      "fillStyle": "solid",
+      "opacity": 30,
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      },
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "ingest_title",
+      "x": 100,
+      "y": 70,
+      "width": 800,
+      "height": 40,
+      "text": "Ingestion Pipeline",
+      "fontSize": 20,
+      "textAlign": "left",
+      "fontFamily": 1
+    },
+    {
+      "type": "rectangle",
+      "id": "query_bg",
+      "x": 50,
+      "y": 400,
+      "width": 1000,
+      "height": 350,
+      "backgroundColor": "#e5dbff",
+      "fillStyle": "solid",
+      "opacity": 30,
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      },
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "query_title",
+      "x": 100,
+      "y": 420,
+      "width": 800,
+      "height": 40,
+      "text": "Query Pipeline",
+      "fontSize": 20,
+      "textAlign": "left",
+      "fontFamily": 1
+    },
+    {
+      "type": "rectangle",
+      "id": "docs",
+      "x": 100,
+      "y": 150,
+      "width": 150,
+      "height": 60,
+      "backgroundColor": "#fff3bf",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "docs_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "docs_label",
+      "x": 110,
+      "y": 160,
+      "width": 130,
+      "height": 40,
+      "text": "Raw Documents",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "docs"
+    },
+    {
+      "type": "rectangle",
+      "id": "chunk_embed",
+      "x": 350,
+      "y": 150,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "chunk_embed_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "chunk_embed_label",
+      "x": 360,
+      "y": 160,
+      "width": 180,
+      "height": 40,
+      "text": "Chunk & Embed",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "chunk_embed"
+    },
+    {
+      "type": "rectangle",
+      "id": "vector_db",
+      "x": 650,
+      "y": 250,
+      "width": 150,
+      "height": 100,
+      "backgroundColor": "#c3fae8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "vector_db_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "vector_db_label",
+      "x": 660,
+      "y": 260,
+      "width": 130,
+      "height": 80,
+      "text": "Vector DB",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "vector_db"
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 250,
+      "y": 180,
+      "width": 100,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "docs",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "chunk_embed",
+        "fixedPoint": [
+          0,
+          0.5
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 550,
+      "y": 180,
+      "width": 100,
+      "height": 70,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          70
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "chunk_embed",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "vector_db",
+        "fixedPoint": [
+          0,
+          0
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "rectangle",
+      "id": "user_query",
+      "x": 100,
+      "y": 550,
+      "width": 150,
+      "height": 60,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "user_query_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "user_query_label",
+      "x": 110,
+      "y": 560,
+      "width": 130,
+      "height": 40,
+      "text": "User Query",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "user_query"
+    },
+    {
+      "type": "rectangle",
+      "id": "query_embed",
+      "x": 350,
+      "y": 550,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "query_embed_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "query_embed_label",
+      "x": 360,
+      "y": 560,
+      "width": 180,
+      "height": 40,
+      "text": "Embed Query",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "query_embed"
+    },
+    {
+      "type": "rectangle",
+      "id": "retrieve",
+      "x": 650,
+      "y": 550,
+      "width": 150,
+      "height": 60,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "retrieve_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "retrieve_label",
+      "x": 660,
+      "y": 560,
+      "width": 130,
+      "height": 40,
+      "text": "Retrieve",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "retrieve"
+    },
+    {
+      "type": "rectangle",
+      "id": "llm_gen",
+      "x": 850,
+      "y": 550,
+      "width": 150,
+      "height": 60,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "llm_gen_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "llm_gen_label",
+      "x": 860,
+      "y": 560,
+      "width": 130,
+      "height": 40,
+      "text": "LLM Generate",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "llm_gen"
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 250,
+      "y": 580,
+      "width": 100,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "user_query",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "query_embed",
+        "fixedPoint": [
+          0,
+          0.5
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a4",
+      "x": 550,
+      "y": 580,
+      "width": 100,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          100,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "query_embed",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "retrieve",
+        "fixedPoint": [
+          0,
+          0.5
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a5",
+      "x": 725,
+      "y": 350,
+      "width": 0,
+      "height": 200,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          200
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "vector_db",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "endBinding": {
+        "elementId": "retrieve",
+        "fixedPoint": [
+          0.5,
+          0
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a6",
+      "x": 800,
+      "y": 580,
+      "width": 50,
+      "height": 0,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          50,
+          0
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "retrieve",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "llm_gen",
+        "fixedPoint": [
+          0,
+          0.5
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "rectangle",
+      "id": "eval_fb",
+      "x": 650,
+      "y": 680,
+      "width": 350,
+      "height": 50,
+      "backgroundColor": "#ffc9c9",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "eval_fb_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "eval_fb_label",
+      "x": 660,
+      "y": 690,
+      "width": 330,
+      "height": 30,
+      "text": "Evaluation & Feedback Loop",
+      "fontSize": 16,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "eval_fb"
+    },
+    {
+      "type": "arrow",
+      "id": "a7",
+      "x": 925,
+      "y": 610,
+      "width": 0,
+      "height": 70,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          70
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "llm_gen",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "endBinding": {
+        "elementId": "eval_fb",
+        "fixedPoint": [
+          0.75,
+          0
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a8",
+      "x": 650,
+      "y": 700,
+      "width": -500,
+      "height": -150,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          -500,
+          0
+        ],
+        [
+          -500,
+          -120
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "strokeStyle": "dashed",
+      "startBinding": {
+        "elementId": "eval_fb",
+        "fixedPoint": [
+          0,
+          0.5
+        ]
+      },
+      "endBinding": {
+        "elementId": "user_query",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "roughness": 2
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "gridSize": null
+  },
+  "files": {}
+}

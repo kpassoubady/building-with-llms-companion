@@ -1,0 +1,58 @@
+[
+  {
+    "type": "rectangle", "id": "input_bg", "x": 50, "y": 350, "width": 500, "height": 300,
+    "backgroundColor": "#dbe4ff", "fillStyle": "solid", "opacity": 30, "strokeStyle": "dashed", "roundness": { "type": 3 }
+  },
+
+  {
+    "type": "rectangle", "id": "input", "x": 200, "y": 600, "width": 200, "height": 40,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Inputs", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "input_emb", "x": 200, "y": 520, "width": 200, "height": 40,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Input Embedding", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "pos_enc", "x": 100, "y": 480, "width": 80, "height": 80,
+    "backgroundColor": "#ffd8a8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Positional\nEncoding", "fontSize": 14 }
+  },
+  {
+    "type": "rectangle", "id": "multi_head", "x": 200, "y": 400, "width": 200, "height": 60,
+    "backgroundColor": "#d0bfff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Multi-Head Attention", "fontSize": 18 }
+  },
+  {
+    "type": "rectangle", "id": "ffn", "x": 200, "y": 280, "width": 200, "height": 60,
+    "backgroundColor": "#d0bfff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Feed Forward", "fontSize": 18 }
+  },
+  {
+    "type": "arrow", "id": "a1", "x": 300, "y": 600, "width": 0, "height": -40,
+    "points": [[0,0], [0,-40]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "input", "fixedPoint": [0.5, 0] },
+    "endBinding": { "elementId": "input_emb", "fixedPoint": [0.5, 1] }
+  },
+  {
+    "type": "arrow", "id": "a2", "x": 300, "y": 520, "width": 0, "height": -60,
+    "points": [[0,0], [0,-60]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "input_emb", "fixedPoint": [0.5, 0] },
+    "endBinding": { "elementId": "multi_head", "fixedPoint": [0.5, 1] }
+  },
+  {
+    "type": "arrow", "id": "a3", "x": 180, "y": 520, "width": 20, "height": -20,
+    "points": [[0,0], [20,-20]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "pos_enc", "fixedPoint": [1, 0.5] }
+  },
+  {
+    "type": "arrow", "id": "a4", "x": 300, "y": 400, "width": 0, "height": -60,
+    "points": [[0,0], [0,-60]], "endArrowhead": "arrow",
+    "startBinding": { "elementId": "multi_head", "fixedPoint": [0.5, 0] },
+    "endBinding": { "elementId": "ffn", "fixedPoint": [0.5, 1] }
+  },
+  {
+    "type": "cameraUpdate", "width": 1200, "height": 900, "x": 0, "y": 0
+  }
+]

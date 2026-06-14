@@ -1,0 +1,48 @@
+[
+  {
+    "type": "rectangle", "id": "bg", "x": 50, "y": 50, "width": 800, "height": 600,
+    "backgroundColor": "#dbe4ff", "fillStyle": "solid", "opacity": 30, "strokeStyle": "solid", "roundness": { "type": 3 }
+  },
+  {
+    "type": "text", "id": "title", "x": 100, "y": 80, "width": 600, "height": 40,
+    "text": "Capability Matrix (10 Tasks vs Reliability / Cost)", "fontSize": 24, "textAlign": "center"
+  },
+  {
+    "type": "rectangle", "id": "header", "x": 80, "y": 140, "width": 740, "height": 40,
+    "backgroundColor": "#a5d8ff", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Task                  |  Reliability |  Best Model  |  Cost Tier", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r1", "x": 80, "y": 200, "width": 740, "height": 40,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Translation          |  High        |  GPT-4       |  $$$", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r2", "x": 80, "y": 250, "width": 740, "height": 40,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Summarization        |  High        |  Claude 3    |  $$", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r3", "x": 80, "y": 300, "width": 740, "height": 40,
+    "backgroundColor": "#ffd8a8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Coding               |  Medium      |  GPT-4 / Sonnet | $$$", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r4", "x": 80, "y": 350, "width": 740, "height": 40,
+    "backgroundColor": "#ffd8a8", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Creative Writing     |  Medium      |  Claude 3    |  $$", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r5", "x": 80, "y": 400, "width": 740, "height": 40,
+    "backgroundColor": "#ffc9c9", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Math / Logic         |  Low         |  GPT-4       |  $$$", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "rectangle", "id": "r6", "x": 80, "y": 450, "width": 740, "height": 40,
+    "backgroundColor": "#b2f2bb", "fillStyle": "solid", "roundness": { "type": 3 },
+    "label": { "text": "Data Extraction      |  High        |  Gemini Pro  |  $", "fontSize": 18, "textAlign": "left" }
+  },
+  {
+    "type": "cameraUpdate", "width": 1200, "height": 900, "x": 0, "y": 0
+  }
+]

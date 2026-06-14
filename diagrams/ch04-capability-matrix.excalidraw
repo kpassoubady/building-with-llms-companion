@@ -1,0 +1,278 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-cli",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "bg",
+      "x": 50,
+      "y": 50,
+      "width": 800,
+      "height": 600,
+      "backgroundColor": "#dbe4ff",
+      "fillStyle": "solid",
+      "opacity": 30,
+      "strokeStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "x": 100,
+      "y": 80,
+      "width": 600,
+      "height": 40,
+      "text": "Capability Matrix (10 Tasks vs Reliability / Cost)",
+      "fontSize": 24,
+      "textAlign": "center",
+      "fontFamily": 1
+    },
+    {
+      "type": "rectangle",
+      "id": "header",
+      "x": 80,
+      "y": 140,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "header_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "header_label",
+      "x": 90,
+      "y": 150,
+      "width": 720,
+      "height": 20,
+      "text": "Task                  |  Reliability |  Best Model  |  Cost Tier",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "header"
+    },
+    {
+      "type": "rectangle",
+      "id": "r1",
+      "x": 80,
+      "y": 200,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r1_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r1_label",
+      "x": 90,
+      "y": 210,
+      "width": 720,
+      "height": 20,
+      "text": "Translation          |  High        |  GPT-4       |  $$$",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r1"
+    },
+    {
+      "type": "rectangle",
+      "id": "r2",
+      "x": 80,
+      "y": 250,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r2_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r2_label",
+      "x": 90,
+      "y": 260,
+      "width": 720,
+      "height": 20,
+      "text": "Summarization        |  High        |  Claude 3    |  $$",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r2"
+    },
+    {
+      "type": "rectangle",
+      "id": "r3",
+      "x": 80,
+      "y": 300,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r3_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r3_label",
+      "x": 90,
+      "y": 310,
+      "width": 720,
+      "height": 20,
+      "text": "Coding               |  Medium      |  GPT-4 / Sonnet | $$$",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r3"
+    },
+    {
+      "type": "rectangle",
+      "id": "r4",
+      "x": 80,
+      "y": 350,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r4_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r4_label",
+      "x": 90,
+      "y": 360,
+      "width": 720,
+      "height": 20,
+      "text": "Creative Writing     |  Medium      |  Claude 3    |  $$",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r4"
+    },
+    {
+      "type": "rectangle",
+      "id": "r5",
+      "x": 80,
+      "y": 400,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#ffc9c9",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r5_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r5_label",
+      "x": 90,
+      "y": 410,
+      "width": 720,
+      "height": 20,
+      "text": "Math / Logic         |  Low         |  GPT-4       |  $$$",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r5"
+    },
+    {
+      "type": "rectangle",
+      "id": "r6",
+      "x": 80,
+      "y": 450,
+      "width": 740,
+      "height": 40,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "r6_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "r6_label",
+      "x": 90,
+      "y": 460,
+      "width": 720,
+      "height": 20,
+      "text": "Data Extraction      |  High        |  Gemini Pro  |  $",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "r6"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "gridSize": null
+  },
+  "files": {}
+}

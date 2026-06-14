@@ -1,0 +1,224 @@
+/* @theme gen-ai-course */
+
+@import 'default';
+
+:root {
+  --color-primary: #1a73e8;
+  --color-primary-dark: #0d47a1;
+  --color-accent: #00bfa5;
+  --color-bg: #ffffff;
+  --color-bg-code: #f5f7fa;
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
+  --color-border: #e2e8f0;
+}
+
+section {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  padding: 40px 60px;
+}
+
+/* Title slide */
+section.lead {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #ffffff;
+  text-align: center;
+}
+
+section.lead h1 {
+  color: #ffffff;
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  border-bottom: 3px solid var(--color-accent);
+}
+
+section.lead h2 {
+  color: #e3f2fd;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+section.lead strong {
+  color: #ffffff;
+}
+
+section.lead header,
+section.lead footer {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+section.lead a {
+  color: var(--color-accent);
+}
+
+section.lead::after {
+  color: var(--color-accent);
+}
+
+section.divider::after {
+  color: var(--color-accent);
+}
+
+/* Logo positioning helper — use <img class="logo"> in slide HTML */
+img.logo {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  width: 160px;
+  opacity: 0.9;
+}
+
+/* Headings */
+h1 {
+  color: var(--color-primary);
+  font-size: 1.8em;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  color: var(--color-primary-dark);
+  font-size: 1.4em;
+}
+
+h3 {
+  color: var(--color-text);
+  font-size: 1.1em;
+}
+
+/* Code blocks */
+pre {
+  background-color: var(--color-bg-code);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 0.75em;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* Inline code */
+:not(pre) > code {
+  background-color: var(--color-bg-code);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+  color: var(--color-primary-dark);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85em;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+/* Blockquotes — used for notes/callouts */
+blockquote {
+  border-left: 4px solid var(--color-accent);
+  background-color: #f0fdf9;
+  padding: 12px 20px;
+  margin: 16px 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9em;
+}
+
+/* Lists */
+ul, ol {
+  line-height: 1.7;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* Footer */
+footer {
+  font-size: 0.65em;
+  color: var(--color-text-light);
+}
+
+/* Section divider slide */
+section.divider {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+section.divider h1 {
+  color: #ffffff;
+  border-bottom: 3px solid var(--color-accent);
+  font-size: 2.2em;
+}
+
+section.divider h2 {
+  color: #e3f2fd;
+  font-size: 1.3em;
+}
+
+section.divider strong {
+  color: #ffffff;
+}
+
+section.divider header,
+section.divider footer {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+section.divider code {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Emphasis styles */
+strong {
+  color: var(--color-primary-dark);
+}
+
+em {
+  color: var(--color-text-light);
+}
+
+/* Image sizing helpers */
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+img[alt~="small"] {
+  width: 300px;
+}
+
+img[alt~="medium"] {
+  width: 500px;
+}
+
+img[alt~="large"] {
+  width: 700px;
+}

@@ -85,4 +85,4 @@ MIT
 
 ## Author
 
-Kangeyan Passoubady (Kangs) | [Kavin School](https://kavinschool.com)
+Kangeyan Passoubady (Kangs) | [Kavin School](https://kavinschool.com) | [LinkedIn](https://www.linkedin.com/in/kpassoubady/) | [GitHub](https://github.com/kpassoubady)

@@ -1,0 +1,327 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "excalidraw-cli",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "input_bg",
+      "x": 50,
+      "y": 350,
+      "width": 500,
+      "height": 300,
+      "backgroundColor": "#dbe4ff",
+      "fillStyle": "solid",
+      "opacity": 30,
+      "strokeStyle": "dashed",
+      "roundness": {
+        "type": 3
+      },
+      "roughness": 2
+    },
+    {
+      "type": "rectangle",
+      "id": "input",
+      "x": 200,
+      "y": 600,
+      "width": 200,
+      "height": 40,
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "input_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "input_label",
+      "x": 210,
+      "y": 610,
+      "width": 180,
+      "height": 20,
+      "text": "Inputs",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "input"
+    },
+    {
+      "type": "rectangle",
+      "id": "input_emb",
+      "x": 200,
+      "y": 520,
+      "width": 200,
+      "height": 40,
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "input_emb_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "input_emb_label",
+      "x": 210,
+      "y": 530,
+      "width": 180,
+      "height": 20,
+      "text": "Input Embedding",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "input_emb"
+    },
+    {
+      "type": "rectangle",
+      "id": "pos_enc",
+      "x": 100,
+      "y": 480,
+      "width": 80,
+      "height": 80,
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "pos_enc_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "pos_enc_label",
+      "x": 110,
+      "y": 490,
+      "width": 60,
+      "height": 60,
+      "text": "Positional\nEncoding",
+      "fontSize": 14,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "pos_enc"
+    },
+    {
+      "type": "rectangle",
+      "id": "multi_head",
+      "x": 200,
+      "y": 400,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "multi_head_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "multi_head_label",
+      "x": 210,
+      "y": 410,
+      "width": 180,
+      "height": 40,
+      "text": "Multi-Head Attention",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "multi_head"
+    },
+    {
+      "type": "rectangle",
+      "id": "ffn",
+      "x": 200,
+      "y": 280,
+      "width": 200,
+      "height": 60,
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "roundness": {
+        "type": 3
+      },
+      "boundElements": [
+        {
+          "id": "ffn_label",
+          "type": "text"
+        }
+      ],
+      "roughness": 2
+    },
+    {
+      "type": "text",
+      "id": "ffn_label",
+      "x": 210,
+      "y": 290,
+      "width": 180,
+      "height": 40,
+      "text": "Feed Forward",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "ffn"
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 300,
+      "y": 600,
+      "width": 0,
+      "height": -40,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -40
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "input",
+        "fixedPoint": [
+          0.5,
+          0
+        ]
+      },
+      "endBinding": {
+        "elementId": "input_emb",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 300,
+      "y": 520,
+      "width": 0,
+      "height": -60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -60
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "input_emb",
+        "fixedPoint": [
+          0.5,
+          0
+        ]
+      },
+      "endBinding": {
+        "elementId": "multi_head",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 180,
+      "y": 520,
+      "width": 20,
+      "height": -20,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          20,
+          -20
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "pos_enc",
+        "fixedPoint": [
+          1,
+          0.5
+        ]
+      },
+      "roughness": 2
+    },
+    {
+      "type": "arrow",
+      "id": "a4",
+      "x": 300,
+      "y": 400,
+      "width": 0,
+      "height": -60,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          -60
+        ]
+      ],
+      "endArrowhead": "arrow",
+      "startBinding": {
+        "elementId": "multi_head",
+        "fixedPoint": [
+          0.5,
+          0
+        ]
+      },
+      "endBinding": {
+        "elementId": "ffn",
+        "fixedPoint": [
+          0.5,
+          1
+        ]
+      },
+      "roughness": 2
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff",
+    "gridSize": null
+  },
+  "files": {}
+}
