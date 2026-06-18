@@ -1,33 +1,7 @@
-"""
-Exercise: Prompt Rewriter
-Chapter 5: Prompt Engineering Fundamentals
-
-Goal: Fix 5 deliberately bad prompts by rewriting each one using the 4
-building blocks (Instruction, Context, Input Data, Output Format), then run
-both versions and compare the outputs side-by-side.
-
-Skills practiced:
-- Recognising common prompt anti-patterns
-- Applying all 4 building blocks to a real rewrite
-- Comparing model outputs to see the quality difference
-
-Instructions:
-1. Read BAD_PROMPTS. Each entry describes what is wrong with the prompt.
-2. For each entry, complete the "rewritten" field in REWRITES using all
-   4 building blocks. Keep the same underlying topic as the bad prompt.
-3. Complete run_comparison() to call the model with both versions and print
-   the responses side-by-side.
-4. Run the file and note how much the rewrite improves output quality.
-5. (Stretch) Add a sixth entry of your own, with a bad prompt you have
-   actually written before.
-
-Run: python exercises/ch05/prompt_rewriter.py  (from the repo root)
-"""
-
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 from shared import get_completion
 
 # ---------------------------------------------------------------------------
@@ -130,20 +104,6 @@ def run_comparison(bad_prompt: str, rewritten_prompt: str, topic: str) -> None:
     # Then call get_completion for rewritten_prompt (user message only, tier="mini").
     # Print both responses with clear BEFORE / AFTER headers.
 
-    # Hint:
-    # bad_response = get_completion(
-    #     [{"role": "user", "content": bad_prompt}], tier="mini"
-    # )
-    # good_response = get_completion(
-    #     [{"role": "user", "content": rewritten_prompt}], tier="mini"
-    # )
-    # separator = "=" * 60
-    # print(f"\n{separator}")
-    # print(f"Topic: {topic}")
-    # print(f"{separator}")
-    # print(f"BEFORE:\n{bad_response[:300]}")
-    # print(f"\nAFTER:\n{good_response[:300]}")
-
     raise NotImplementedError("Complete run_comparison() to continue.")
 
 
@@ -163,22 +123,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# Expected output (illustrative):
-# === Prompt Rewriter ===
-#
-# ============================================================
-# Topic: Code review
-# ============================================================
-# BEFORE:
-# Here are some suggestions to make your code better:
-# 1. Use meaningful variable names...
-# (generic, no context, no code to review)
-#
-# AFTER:
-# Code Review Results:
-# 1. Line 3 - variable `x` should be `user_id` for clarity. Fix: rename to user_id.
-# 2. Line 7 - missing error handling for None input. Fix: add `if value is None: return`.
-# ...
-# (specific, actionable, structured)
