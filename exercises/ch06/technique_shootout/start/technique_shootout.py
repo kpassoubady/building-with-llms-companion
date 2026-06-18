@@ -1,30 +1,8 @@
-"""
-Exercise: Technique Shootout
-Chapter 6: Prompting Techniques
-
-Goal: Send the same set of prompts through four different prompting techniques
-and collect outputs side by side so you can compare quality and style.
-
-Skills practiced:
-- Zero-shot, few-shot, chain-of-thought (CoT), and role prompting
-- Structuring system and user messages for each technique
-- Collecting and displaying multi-technique results in a summary table
-- Observing when each technique produces notably different answers
-
-Instructions:
-1. Implement each of the four strategy functions (they share the same signature).
-2. Run run_shootout() to execute all strategies on every prompt.
-3. Inspect the printed table - note where outputs diverge across techniques.
-4. Add a 5th prompt of your own to PROMPTS and re-run.
-
-Run: python exercises/ch06/technique_shootout.py  (from the repo root)
-"""
-
 import os
 import sys
 import textwrap
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 
 from shared import get_completion
 
@@ -74,12 +52,6 @@ def zero_shot(prompt):
     """
     # TODO: Call get_completion with just a plain user message containing prompt.
     #   Use tier="mini", temperature=0.3.
-    # Hint:
-    # return get_completion(
-    #     messages=[{"role": "user", "content": prompt}],
-    #     tier="mini",
-    #     temperature=0.3,
-    # )
     raise NotImplementedError("Implement zero_shot()")
 
 
@@ -96,11 +68,6 @@ def few_shot(prompt):
     #   Q: <question>
     #   A: <answer>
     # Then send the new prompt as the user message.
-    # Hint:
-    # examples = "\n".join(
-    #     f"Q: {q}\nA: {a}" for q, a in FEW_SHOT_PAIRS
-    # )
-    # system = "Answer concisely. Here are examples:\n\n" + examples
     raise NotImplementedError("Implement few_shot()")
 
 
@@ -115,13 +82,6 @@ def chain_of_thought(prompt):
     """
     # TODO: Append "Think step by step." to the user message, or add a system
     #   instruction that requires the model to reason before concluding.
-    # Hint:
-    # cot_prompt = prompt + "\n\nThink step by step."
-    # return get_completion(
-    #     messages=[{"role": "user", "content": cot_prompt}],
-    #     tier="mini",
-    #     temperature=0.3,
-    # )
     raise NotImplementedError("Implement chain_of_thought()")
 
 
@@ -136,19 +96,6 @@ def role_prompting(prompt):
     """
     # TODO: Add a system message that assigns an expert persona relevant to the
     #   question. Keep the persona generic enough to apply to all prompts.
-    # Hint:
-    # system = (
-    #     "You are an expert educator who gives precise, well-structured answers "
-    #     "suitable for a technical audience. Be clear and concise."
-    # )
-    # return get_completion(
-    #     messages=[
-    #         {"role": "system", "content": system},
-    #         {"role": "user", "content": prompt},
-    #     ],
-    #     tier="mini",
-    #     temperature=0.3,
-    # )
     raise NotImplementedError("Implement role_prompting()")
 
 
@@ -216,14 +163,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# Expected output (illustrative):
-# Prompt  1: Is a hot dog a sandwich? Explain your reasoning.
-# -----------------------------------------------------------------
-#   [zero-shot]                             [few-shot]
-#   This depends on your definition ...    Technically yes, ...
-#
-#   [chain-of-thought]                      [role-prompt]
-#   Step 1: Define "sandwich" ...           As a food scientist, ...
-# =================================================================
